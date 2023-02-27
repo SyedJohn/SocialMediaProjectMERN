@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Users(props) {
      /* 
@@ -6,9 +6,14 @@ function Users(props) {
     const {name, age} = props;
     */
    const [name, setName] = useState("john");
+
    const changeName = (ev) => {
     setName(ev.target.value);
    }
+
+   useEffect(() => {
+    console.log("updated name",name);
+   }, [name]);
 
   return (
     <>
