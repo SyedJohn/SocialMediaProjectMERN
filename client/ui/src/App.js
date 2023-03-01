@@ -8,7 +8,7 @@ function App() {
     <div className="App">
       <h1>hello world</h1>
       {/* <UsersClass /> */}
-      <Users  name="anil" age="20" country="india"/>
+      <Users />
     </div>
   );
 }
