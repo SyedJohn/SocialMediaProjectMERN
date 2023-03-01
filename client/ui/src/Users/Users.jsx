@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import User from '../User/User';
 
 function Users(props) {
 
@@ -16,8 +17,16 @@ function Users(props) {
   }, []);
   return (
     <>
-      {users.map((user) => {
-      return <h1>{user.firstName}</h1>})}
+      {users.map(user => <User key = {user.id} user = {user}/>)}
+
+      {/*{users.map((user) => {
+        const {firstName,id,picture} = user;
+      return (
+      <div key={id}>
+      <div>{firstName}</div>
+      <img src={picture} alt="" />
+      </div>
+      )})} */}
     </>
   )
 }
