@@ -1,0 +1,14 @@
+.user{
+    margin-top: 30px;
+    box-shadow: grey 8px 7px 15px;
+    border: 2px solid black;
+    height: 150px;
+    width: 80%;
+}
+.user:hover{
+    background-color: rgb(209, 237, 237);
+}
+.user img{
+    height: 120px;
+}
+

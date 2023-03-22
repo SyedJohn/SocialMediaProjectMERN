@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import User from '../User/User';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 function Users(props) {
 
@@ -16,8 +19,10 @@ function Users(props) {
     })()
   }, []);
   return (
-    <>
+    <Container>
+      <Row>
       {users.map(user => <User key = {user.id} user = {user}/>)}
+      </Row>
 
       {/*{users.map((user) => {
         const {firstName,id,picture} = user;
@@ -27,7 +32,7 @@ function Users(props) {
       <img src={picture} alt="" />
       </div>
       )})} */}
-    </>
+    </Container>
   )
 }
 

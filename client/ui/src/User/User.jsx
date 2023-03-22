@@ -1,11 +1,23 @@
-import React from 'react'
+import React from 'react';
+import {Card,Button,Col} from 'react-bootstrap';
+import './User.css';
+
 
 function User(props) {
-    const {firstName,id,picture} = props.user;
-  return (
+  const { picture, firstName, lastName, id } = props.user;
+    return (
     <>
-      <div>{firstName}</div>
-      <img src={picture} alt="" />
+    <Col lg={4} md={6} sm={12} className="mb-3">
+    <Card className='user'>
+      <Card.Body className='d-flex justify-content-around'>
+        <img src={picture} alt="" />
+        <div className='mb-1'>
+        <div className='mb-3'>{firstName} {lastName}</div>
+        <Button variant="primary">Add Friend</Button>
+        </div>
+      </Card.Body>
+    </Card>
+    </Col>
     </>
   )
 }
