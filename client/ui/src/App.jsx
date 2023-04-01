@@ -8,6 +8,7 @@ import Home from './Home/Home';
 import About from './Home/About';
 import Navibar from './Navibar/Navibar';
 import Routing from './Routing/Routing';
+import Signup from './Signup/Signup';
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/router/:category/:userId' element={<Routing />} />
+        <Route path='/signup' element={<Signup />} />
       </Routes>
     </BrowserRouter>
     </>
